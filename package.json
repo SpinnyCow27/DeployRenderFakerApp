@@ -2,13 +2,14 @@
   "name": "mysite",
   "version": "1.0.0",
   "scripts": {
-    "build": "esbuild app/javascript/application.js --bundle --outdir=app/assets/builds",
-    "build:css": "postcss app/assets/stylesheets/application.css --use autoprefixer -d app/assets/builds"
-  },
+  "build": "npx esbuild app/javascript/application.js --bundle --outdir=app/assets/builds && npx postcss app/assets/builds/application.css --use autoprefixer -o app/assets/builds/application.css",
+  "build:css": "postcss app/assets/stylesheets/application.css --use autoprefixer -o app/assets/builds/application.css"
+},
   "dependencies": {
     "bootstrap": "^5.0.0",
     "@hotwired/turbo-rails": "^7.1.0",
     "@hotwired/stimulus": "^3.0.0",
+    "@hotwired/stimulus-webpack-helpers": "^1.0.0",
     "esbuild": "^0.14.0"
   },
   "devDependencies": {

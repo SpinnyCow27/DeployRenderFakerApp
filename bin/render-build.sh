@@ -2,12 +2,22 @@
 # exit on error
 set -o errexit
 
+# Instala las gemas necesarias
 bundle install
+
+# Instala las dependencias de npm
+npm install
+
+# Ejecuta la construcción de JavaScript y CSS
+npm run build
+npm run build:css
+
+# Precompila los activos de Rails
 bundle exec rails assets:precompile
+
+# Limpia los activos antiguos
 bundle exec rails assets:clean
 
-# If you're using a Free instance type, you need to
-# perform database migrations in the build command.
+# Si estás usando un tipo de instancia Free, realiza migraciones de la base de datos
 # Uncomment the following line:
-
 # bundle exec rails db:migrate
