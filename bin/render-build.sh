@@ -1,6 +1,5 @@
-#!/usr/bin/env bash
-# exit on error
-set -o errexit
+#!/bin/sh
+set -e
 
 # Instala las gemas necesarias
 bundle install
@@ -10,12 +9,11 @@ npm install
 
 # Ejecuta la construcción de JavaScript y CSS
 npm run build
-npm run build:css
 
 # Precompila los activos de Rails
 bundle exec rails assets:precompile
 
-# Limpia los activos antiguos
+# Limpia los activos antiguos (opcional)
 bundle exec rails assets:clean
 
 # Si estás usando un tipo de instancia Free, realiza migraciones de la base de datos

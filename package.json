@@ -2,8 +2,8 @@
   "name": "mysite",
   "version": "1.0.0",
   "scripts": {
-  "build": "npx esbuild app/javascript/application.js --bundle --outdir=app/assets/builds && npx postcss app/assets/builds/application.css --use autoprefixer -o app/assets/builds/application.css",
-  "build:css": "postcss app/assets/stylesheets/application.css --use autoprefixer -o app/assets/builds/application.css"
+    "build": "npx esbuild app/javascript/application.js --bundle --outdir=app/assets/builds && npx postcss app/assets/builds/application.css --use autoprefixer -o app/assets/builds/application.css",
+    "build:css": "npx postcss app/assets/builds/application.css --use autoprefixer -o app/assets/builds/application.css"
 },
   "dependencies": {
     "bootstrap": "^5.0.0",
