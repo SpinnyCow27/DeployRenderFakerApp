@@ -7,7 +7,7 @@ import { Turbo } from "@hotwired/turbo-rails";
 import 'bootstrap/dist/css/bootstrap.min.css'; // Importa Bootstrap CSS
 import 'bootstrap'; // Importa Bootstrap JS
 import { Application } from "@hotwired/stimulus";
-import { definitionsFromContext } from "@hotwired/stimulus-webpack-helpers";
+// import { definitionsFromContext } from "@hotwired/stimulus-webpack-helpers";
 
 // Initialize Turbo
 Turbo.start();
